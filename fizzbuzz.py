@@ -16,4 +16,3 @@ def palindrome(word):
     else:
         return False
     
-print(palindrome("jojojojoj"))
