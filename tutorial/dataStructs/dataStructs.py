@@ -21,15 +21,11 @@ class Stack:
         return len(self.data)
     
 stack = Stack()
-for letter in "Uzbekistan":
-    stack.push(letter)
-
-reverse = ""
-
-for i in range(len(stack.data)):
-    reverse += stack.pop()
-
-print(reverse)
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for num in nums:
+    stack.push(num)
+for i in range(stack.size()):
+    print(stack.pop())
 
 #FIFO
 class queue:
@@ -53,3 +49,4 @@ for i in range(0, 7):
     q.enqueue(i)
 
 print(q.dequeue())
+
