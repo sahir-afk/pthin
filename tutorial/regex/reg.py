@@ -34,3 +34,28 @@ print(crazy)
 vowelRegex2 = re.compile(r"[^AEIOUaeiou]")
 crazy2 = vowelRegex2.findall("a  e  a  i  o auwd design of the bad portable light switch yiedkowski point eight nine five sixteen pigs in a cage with protons on either side")
 print(crazy2)
+
+date_reg_ex = re.compile(r"""
+([0-2]\d|3[01])     #day
+(\s|.|/|-)          #dash
+(0\d|1[12])         #month first
+(\s|.|/|-)          #dash
+([1-2]\d{3})        #year
+
+""", re.VERBOSE)
+dormamu = input("enter the date: ")
+date = date_reg_ex.findall(dormamu)
+for num in date:
+    year = int(num[4])
+    month = int(num[2])
+    day = int(num[0])
+    if(year % 4 != 0 or year % 100 == 0 and month == 2 and day > 28 and year % 400 != 0):
+        print("invalid date")
+    elif(month == 2 and day > 29):
+        print("invalid date")
+    else:
+        print("".join(num))
+        
+    
+
+
