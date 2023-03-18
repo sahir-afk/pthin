@@ -14,6 +14,6 @@ numOpen = min(len(linkElems), 5)
 
 for i in range(numOpen):                                              #opens each link in a new tab
     link = linkElems[i].get("href")
-    txt = linkElems[i].getText()
+    txt = linkElems[i].getText()                                      #gets text of element
     print("Opening", txt)
     wb.open(link)
